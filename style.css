@@ -4,29 +4,87 @@ body{
     display: grid;
     grid-template-areas:'header header header header'
                         'nav nav nav nav'
-                        'section section . aside'
+                        'section aside aside aside'
                         'footer footer footer footer';
     grid-template-rows: 20vh 15vh 50vh 30vh;
     /*grid-template-columns: 10vw 30vw 40vw 20vw;*/
-    grid-gap: 10px;
+    /*grid-gap: px;*/
 }
+
 header{
+    background-color:rgb(66, 61, 61);
+    display: flex;
     grid-area: header;
-    background-color: red;
+    justify-content: center;
 }
+
+header div{
+    background-color: #a5a8b1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+header div img{
+        height: 100%;
+        width: 100px;
+}
+
 nav{
+    align-items: center;
+    background-color: orange;
+    display: flex;
     grid-area: nav;
-    background-color: blue;
+    justify-content: space-around;
 }
+
+nav a{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+nav a:hover{
+    color: white;
+    font-weight: bolder;
+}
+
 section{
     grid-area: section;
-    background-color: green;
+    background-color: blue;
+    display: flex;
+    grid-area: section;
+    justify-content: center;
+    align-items: center;
 }
+
+section img{
+    border: 1px solid;
+    border-radius: 100%;
+    width: 400px;
+}
+
 aside{
     grid-area: aside;
-    background-color: yellow;
+    background-color:blue;
+    color: white;
+    display: flex;
+    text-align: center;
 }
+
 footer{
     grid-area: footer;
-    background-color: purple;
+    background-color: whitesmoke;
+}
+
+footer div{
+display: flex;
+justify-content: center;
+align-items: center;
 }
